@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"></head>
+  <body>
+    <script type="module">
+      import {load} from "https://croquet.io/dev/showcase/showcase.js";
+
+      load({
+          apiKey: "19tmqvznG7fDPrAqbLDtNp0qMleep6HjngmnP1BKy",
+          appId: "io.croquet.microverse.localdevdefault2",
+ 	  title: "Test Showcase",
+	  showcase: "gallery",
+	  cards: [
+	      {place: 8, type: "image", path: "./a.gif", urlLink: "https://croquet.io"},
+	      {place: 6, type: "pdf", path: "./1.pdf"},
+	      {place: 2, type: "image", path: "./e.png"},
+	      {place: 1, type: "video", path: "./showcase/first-teatime.mov",
+	       wResolution: 1600, hResolution: 1080},
+	  ],
+	  /* voiceChat: true, */
+      })
+    </script>
+  </body>
+</html>
