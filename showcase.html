@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"></head>
+<html>
+  <head><meta charset="utf-8"></head>
   <body>
     <script type="module">
-      import {load} from "https://croquet.io/dev/showcase/showcase.js";
-
+      import {load} from "https://croquet.dev/showcase/showcase.js";
       load({
-          apiKey: "19tmqvznG7fDPrAqbLDtNp0qMleep6HjngmnP1BKy",
-          appId: "io.croquet.microverse.localdevdefault2",
- 	  title: "Test Showcase",
-	  showcase: "gallery",
-	  cards: [
-	      {place: 6, type: "pdf", path: "./1.pdf"},
-	      {place: 2, type: "image", path: "./e.png"},
-	      {place: 1, type: "video", path: "./first-teatime.mov",
-	       videoWidth: 1600, videoHeight: 1080},
-	  ],
-	  voiceChat: true,
-      })
+        title: "My Showcase", 
+        showcase: "gallery", 
+        cards: [
+          // each item in cards array has a 'place' to specify the location in the art gallery
+          // 'type' is either "image", "pdf", or "video"
+          // 'path' specifies the location of the asset, either as full URL or as path relative to this html file
+          {place: 1, type: "image", path: "https://croquet.dev/showcase/site/CompanyLogo.jpg"},
+          {place: 2, type: "pdf", path: "https://croquet.dev/showcase/site/CompanyDeck.pdf"},
+          {place: 3, type: "video", path: "https://croquet.dev/showcase/site/CustomerVideo.mp4", muted: false},
+          {place: 4, type: "image", path: "https://croquet.dev/showcase/site/CustomerLogos.png"},
+          {place: 5, type: "image", path: "https://croquet.dev/showcase/site/CallToAction.png", urlLink: "https://croquet.dev/webshowcase"},
+        ],
+        voiceChat: true,
+        appId: "io.croquet.yoshiki.showcase",
+        apiKey: "dev:112p0xbhN0o2Bbfgd3Hjv5NG4EipscIcdlCnt1lvK",
+      });
     </script>
   </body>
 </html>
