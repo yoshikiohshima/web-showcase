@@ -1,10 +1,19 @@
+<!doctype html>
 <html>
   <head>
       <title>Yoshiki's Showcase</title>
       <meta charset="UTF-8">
   </head>
   <body>
-    Hello!
-    <iframe width=805 height=805 src="./showcase.html?q=hello2#pw=1"/>
+    <script type="text/javascript">
+      window.addEventListener("resize", () => {
+	  let iframe = document.querySelector("#showcase");
+	  iframe.width = window.innerWidth * 0.9;
+	  iframe.height = window.innerHeight * 0.9;
+      });
+    </script>
+    Welcome to Yoshiki's Showcase!
+    <br>
+    <iframe id="showcase" width=805 height=805 src="./showcase.html?q=hello2#pw=1"/>
   </body>
 </html>
